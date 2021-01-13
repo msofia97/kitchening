@@ -1,0 +1,208 @@
+/*variables*/
+:root{
+    --colorBotones:rgb(77, 76, 76);
+}
+
+/*generales*/
+*{
+    box-sizing: border-box;
+    margin:0 auto;
+    padding:0;
+}
+body{
+    background-image:url('../images/bg-body.png');
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    text-decoration: none;
+    color:white;
+    text-transform:uppercase;
+}
+ul{
+    list-style: none;
+}
+.container{
+    width: 100%;
+}
+header{
+    text-align:center;
+}
+header .logo{
+    width: 100px;
+    margin: 15px,0px,30px,0px;
+    border-radius: 90px;
+}
+header .toggle-nav{
+    display: block;
+    margin-bottom: 30px;
+
+}
+header .toggle-nav span{
+    background-color:var(--colorBotones);
+    padding:5px;
+}
+header nav.main-nav li{
+    background-color:var(--colorBotones);
+    border:1px solid white;
+    padding:5px;
+}
+/*Banner */
+
+section.banner img{
+    display: none;
+}
+
+/* sección productos */
+.container section.vip-products article{
+margin-bottom:30px;
+}
+.container section.vip-products article .photo-container{
+    position:relative;
+}
+.container section.vip-products article .photo{
+    width:100%;
+}
+.container section.vip-products article .special{
+    position:absolute;
+    top:0px;
+    right:10px;
+}
+.container section.vip-products article .zoom{
+background-color:rgba(0, 0, 0, 0.5);
+width: 100%;
+display:block;
+position:absolute;
+text-align:center;
+top:45%;
+padding:5px;
+}
+.container section.vip-products article.product h2{
+    margin:15px,0px;
+}
+.container section.vip-products article.product p{
+    margin-bottom:15px;
+}
+.container section.vip-products article.product a.more{
+    background-color:var(--colorBotones);
+    padding:5px;
+}
+
+/*footer*/
+.container footer li{
+background-color:firebrick;
+text-align:center;
+border: 1px solid white;
+padding:10px;
+}
+
+/*versión tablet*/
+@media(min-width:426px){
+    .container header .toggle-nav{
+        display:none;
+    }
+    header nav.main-nav li{
+        display:inline-block;
+        width:110px;
+    }
+    header nav.main-nav li:not(:last-child){
+        margin-right:4px;
+    }
+/*banner*/
+section.banner img{
+    display:block;
+    width: 100%;
+    margin-bottom:30px;
+}
+.container section.vip-products{
+    overflow:hidden;
+}
+.container section.vip-products article{
+    float:left;
+    width: 48%;
+}
+.container section.vip-products article:nth-child(odd){
+margin-right:4%;
+}
+}
+
+/*Desktop*/
+@media(min-width:769px){
+    body{
+        text-align: center;
+    }
+    header .logo{
+        margin-bottom: 30px;
+        margin-top:15px;
+        width: 180px;
+    }
+
+    .container{
+        width: 1180px;
+    }
+    .container nav.main-nav{
+        width: 1180px;
+        margin-right: 0%;
+    }
+    .container nav.main-nav ul{
+        overflow:hidden;
+        width: 100%;
+        
+    }
+    .container nav.main-nav li.noleft{
+        margin-left:0;
+    }
+    .container nav.main-nav li{
+        font-size: 18px;
+        width:180px;
+        height: 50px;
+        float:left;
+        padding:10px;
+        margin-bottom: 20px;
+        margin-left:16px;
+
+    }
+    .container section.vip-products article.product{
+        width:380px;
+        margin:0px,0px,0px,0px;
+    }
+    .container section.vip-products article:first-child{
+        margin-right: 20px;
+    }
+    .container section.vip-products article:nth-child(3){
+margin-right:0px ;
+margin-left:20px;
+    }
+    .container section.vip-products article:nth-child(5){
+        margin-right:20px ;
+        margin-left:20px;
+    }
+.container section.vip-products article.product{
+    text-align:left;
+}
+.container footer{
+    width:100%;
+    background-color:firebrick;
+    border-top-left-radius:25px;
+    border-top-right-radius:25px;
+    padding:50px;
+    text-align:center;
+}
+.container footer ul{
+    width:100%;
+    text-align:center;
+    margin-top:10px;
+}
+.container footer ul li{
+    border-style:none;
+    border-left:2px solid white;
+    text-align: center;
+    display: inline-block;
+    font-weight: bold;
+}
+.container footer ul li a{
+    text-transform:capitalize;
+}
+.container footer ul li.sinBorde{
+    border-style:none;
+}
+}
